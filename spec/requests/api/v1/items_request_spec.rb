@@ -24,6 +24,23 @@ RSpec.describe 'Items Request' do
     expect(items.first[:attributes][:unit_price]).to eq(32.0)
     expect(items.first[:attributes][:merchant_id]).to be_a Integer
     expect(items.first[:attributes][:merchant_id]).to eq(@merchant.id)
+  end
 
+  it 'can get a single item and it\'s attributes' do
+
+    get "/api/v1/items/#{@item.id}"
+    expect(response).to be_successful
+
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    item = parsed[:data]
+
+    expect(item[:attributes][:name]).to be_a String
+    expect(item[:attributes][:name]).to eq("sword")
+    expect(item[:attributes][:description]).to be_a String
+    expect(item[:attributes][:description]).to eq("pointy")
+    expect(item[:attributes][:unit_price]).to be_a Float
+    expect(item[:attributes][:unit_price]).to eq(32.0)
+    expect(item[:attributes][:merchant_id]).to be_a Integer
+    expect(item[:attributes][:merchant_id]).to eq(@merchant.id)
   end
 end
