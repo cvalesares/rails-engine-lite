@@ -64,6 +64,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
+    coderay (1.1.3)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     diff-lcs (1.4.4)
@@ -81,6 +82,8 @@ GEM
       activesupport (>= 5.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -100,6 +103,9 @@ GEM
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     pg (1.2.3)
+    pry (0.14.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     puma (5.5.2)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -183,8 +189,10 @@ DEPENDENCIES
   byebug
   factory_bot_rails
   faker
+  jsonapi-serializer
   listen (~> 3.3)
   pg (~> 1.1)
+  pry
   puma (~> 5.0)
   rails (~> 6.1.4, >= 6.1.4.1)
   rspec-rails
