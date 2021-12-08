@@ -230,7 +230,7 @@
         "lines": [
           1,
           1,
-          4,
+          7,
           null,
           null
         ]
@@ -269,13 +269,26 @@
           1,
           null,
           1,
-          null,
           1,
           null,
           1,
           null,
           1,
           1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
           1,
           null,
           null
@@ -284,6 +297,11 @@
       "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
         "lines": [
           1,
+          null,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           null,
@@ -305,6 +323,6 @@
         ]
       }
     },
-    "timestamp": 1638935968
+    "timestamp": 1638944255
   }
 }
