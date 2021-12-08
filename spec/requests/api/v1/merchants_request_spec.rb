@@ -7,5 +7,11 @@ RSpec.describe 'Merchants Request' do
     get '/api/v1/merchants'
 
     expect(response).to be_successful
+
+    merchants = JSON.parse(response.body, symbolize_names: true)
+
+    expect(merchants.count).to eq(3)
+    expect(merchants.first).to have_key(:id)
+    expect(merchants.first[:name]).to be_a String
   end
 end

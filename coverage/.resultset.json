@@ -272,11 +272,18 @@
           null,
           1,
           null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
       "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
         "lines": [
+          1,
           1,
           1,
           null,
@@ -290,6 +297,6 @@
         ]
       }
     },
-    "timestamp": 1638933738
+    "timestamp": 1638935404
   }
 }
