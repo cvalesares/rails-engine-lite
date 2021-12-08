@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       resources :merchants, only: [:index, :show]
       get "/api/v1/merchants/:merchant_id/items", to: "merchant_items#index"
 
-      resources :items, only: [:index]
+      resources :items, only: [:index, :show]
     end
   end
 end
