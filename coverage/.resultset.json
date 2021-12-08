@@ -295,8 +295,16 @@
           1,
           null
         ]
+      },
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1638935404
+    "timestamp": 1638935968
   }
 }
