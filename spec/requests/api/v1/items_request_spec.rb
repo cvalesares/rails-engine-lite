@@ -53,7 +53,6 @@ RSpec.describe 'Items Request' do
                   }
     headers = {"CONTENT_TYPE" => "application/json"}
 
-    # We include this header to make sure that these params are passed as JSON rather than as plain text
     post "/api/v1/items", headers: headers, params: JSON.generate(item_params)
     created_item = Item.last
     expect(response.status).to eq(201)
@@ -62,5 +61,34 @@ RSpec.describe 'Items Request' do
     expect(created_item.description).to eq(item_params[:description])
     expect(created_item.unit_price).to eq(item_params[:unit_price])
     expect(created_item.merchant_id).to eq(item_params[:merchant_id])
+  end
+
+
+  it "can update an existing item" do
+    item3 = @merchant.items.create!(name: 'mace', description: 'many pointy bits', unit_price: 34)
+    previous_name = Item.last.name
+    previous_description = Item.last.description
+    item_params = { name: "chain mace", description: 'many pointy bits with chain' }
+    headers = {"CONTENT_TYPE" => "application/json"}
+
+    patch "/api/v1/items/#{item3.id}", headers: headers, params: JSON.generate(item_params)
+
+    expect(response).to be_successful
+    expect(Item.last.name).to_not eq(previous_name)
+    expect(Item.last.name).to eq("chain mace")
+    expect(Item.last.description).to_not eq(previous_description)
+    expect(Item.last.description).to eq('many pointy bits with chain')
+  end
+
+  it "can destroy an book" do
+    item3 = @merchant.items.create!(name: 'chain mace', description: 'many pointy bits with chain', unit_price: 34)
+
+    expect(Item.count).to eq(3)
+
+    delete "/api/v1/items/#{item3.id}"
+
+    expect(response).to be_successful
+    expect(Item.count).to eq(2)
+    expect{Item.find(item3.id)}.to raise_error(ActiveRecord::RecordNotFound)
   end
 end

@@ -242,7 +242,7 @@
         "lines": [
           1,
           1,
-          1,
+          7,
           null,
           null
         ]
@@ -262,7 +262,7 @@
           null
         ]
       },
-      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/models/merchant.rb": {
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/models/item.rb": {
         "lines": [
           1,
           1,
@@ -276,10 +276,166 @@
           null
         ]
       },
-      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/models/item.rb": {
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/spec/models/merchant_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/models/merchant.rb": {
         "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/spec/requests/api/v1/items_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          5,
+          5,
+          5,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/spec/requests/api/v1/merchants_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -303,7 +459,15 @@
           null,
           1,
           1,
+          null,
+          null,
           1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          2,
           null,
           null
         ]
@@ -321,8 +485,36 @@
           1,
           null
         ]
+      },
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1638996763
+    "timestamp": 1639082047
   }
 }
