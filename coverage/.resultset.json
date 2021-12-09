@@ -255,8 +255,11 @@
           1,
           1,
           1,
-          null,
           1,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null
@@ -298,9 +301,9 @@
           null,
           1,
           1,
-          5,
-          5,
-          5,
+          6,
+          6,
+          6,
           null,
           null,
           1,
@@ -386,6 +389,19 @@
           1,
           1,
           2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
           null,
           null
         ]
@@ -486,6 +502,26 @@
           null
         ]
       },
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/controllers/api/v1/item_merchants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
         "lines": [
           1,
@@ -505,16 +541,8 @@
           null,
           null
         ]
-      },
-      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/serializers/merchant_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1639082047
+    "timestamp": 1639090463
   }
 }

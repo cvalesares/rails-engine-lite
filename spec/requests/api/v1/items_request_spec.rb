@@ -91,4 +91,17 @@ RSpec.describe 'Items Request' do
     expect(Item.count).to eq(2)
     expect{Item.find(item3.id)}.to raise_error(ActiveRecord::RecordNotFound)
   end
+
+  it "can get an item's merchant" do
+
+    get "/api/v1/items/#{@item.id}/merchant"
+
+    expect(response).to be_successful
+
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    merchant = parsed[:data]
+
+    expect(merchant[:id].to_i).to eq(@merchant.id)
+    expect(merchant[:attributes][:name]).to eq(@merchant.name)
+  end
 end
