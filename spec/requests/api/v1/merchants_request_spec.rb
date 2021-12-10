@@ -27,19 +27,22 @@ RSpec.describe 'Merchants Request' do
     expect(merchant[:attributes][:name]).to be_a String
   end
 
-  xit 'can get a merchant\'s items' do
-    merchant = Merchant.create!(name: "Bob Burger")
-    merchant2 = Merchant.create!(name: "Linda Belcher")
+  it "can get an merchant's items" do
+    merchant = Merchant.create!(name: "Bob Belcher")
     item = merchant.items.create!(name: "sword", description: "pointy", unit_price: 32)
     item2 = merchant.items.create!(name: "shield", description: "not pointy", unit_price: 30)
-    item3 = merchant2.items.create!(name: "rock", description: "not pointy", unit_price: 0)
 
     get "/api/v1/merchants/#{merchant.id}/items"
+
     expect(response).to be_successful
 
     parsed = JSON.parse(response.body, symbolize_names: true)
-    binding.pry
+    items = parsed[:data]
 
-
+    expect(items.first[:id].to_i).to eq(item.id)
+    expect(items.first[:attributes][:name]).to eq(item.name)
+    expect(items.first[:attributes][:description]).to eq(item.description)
+    expect(items.first[:attributes][:unit_price]).to eq(item.unit_price)
+    expect(items.first[:attributes][:merchant_id]).to eq(merchant.id)
   end
 end
