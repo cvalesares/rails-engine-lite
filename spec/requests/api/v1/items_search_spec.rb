@@ -9,7 +9,7 @@ RSpec.describe "Item Search" do
     @item3 = @merchant2.items.create!(name: "wooden sword", description: "pointy with splinters", unit_price: 11)
   end
 
-  it ' can find all items by name fragment' do
+  it 'can find all items by name fragment' do
     get "/api/v1/items/find_all?name=word"
 
     expect(response).to be_successful
@@ -26,5 +26,16 @@ RSpec.describe "Item Search" do
     expect(items[1][:attributes][:name]).to eq(@item3.name)
     expect(items[1][:attributes][:description]).to eq(@item3.description)
     expect(items[1][:attributes][:unit_price]).to eq(@item3.unit_price)
+  end
+end
+
+describe 'sad path' do
+  xit 'returns and error if no match' do
+    get "/api/v1/items/find_all?name=xf"
+    #still getting "word" as params instead of xf"
+    expect(response.status).to eq(404)
+
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    expect(parsed[:data]).to have_value("No item matches")
   end
 end
