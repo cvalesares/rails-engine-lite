@@ -9,9 +9,15 @@ RSpec.describe "Merchant Search" do
     @item2 = @merchant.items.create!(name: "shield", description: "not pointy", unit_price: 30)
   end
 
-  xit "can find a merchant by name fragment" do
-    get "/api/v1/merchants/find?name=iLl"
+  it "can find a merchant by name fragment" do
+    get "/api/v1/merchants/find?name=ob"
 
     expect(response).to be_successful
+
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    merchant = parsed[:data]
+
+    expect(merchant[:id].to_i).to eq(@merchant.id)
+    expect(merchant[:attributes][:name]).to eq(@merchant.name)
   end
 end

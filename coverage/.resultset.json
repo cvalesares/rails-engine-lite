@@ -254,11 +254,14 @@
           1,
           1,
           1,
+          null,
+          1,
           1,
           null,
           null,
           1,
           1,
+          null,
           null,
           null,
           null,
@@ -292,6 +295,10 @@
         "lines": [
           1,
           1,
+          null,
+          1,
+          2,
+          null,
           null
         ]
       },
@@ -464,17 +471,23 @@
           null,
           1,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           1,
-          0,
+          1,
           null,
-          0,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
           null,
           null
         ]
@@ -577,8 +590,21 @@
           null,
           null
         ]
+      },
+      "/Users/christianvalesares/mod3/projects/rails_engine_lite/rails-engine/app/controllers/api/v1/merchants_search_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1639095540
+    "timestamp": 1639098619
   }
 }
