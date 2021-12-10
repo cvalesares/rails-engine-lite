@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-12-10T09:42:08-05:00">2021-12-10T09:42:08-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-12-10T18:03:39-05:00">2021-12-10T18:03:39-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  97.41%
+  99.26%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.08
+         1.1
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>270</b> relevant lines,
-    <span class="green"><b>263</b> lines covered</span> and
-    <span class="red"><b>7</b> lines missed. </span>
+    <b>271</b> relevant lines,
+    <span class="green"><b>269</b> lines covered</span> and
+    <span class="red"><b>2</b> lines missed. </span>
     (<span class="green">
-  97.41%
+  99.26%
 </span>
 )
   </div>
@@ -94,12 +94,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#1d6ccfd3f3c3741b88d55f425696f6f8c4d5dfed" class="src_link" title="app/controllers/api/v1/items_search_controller.rb">app/controllers/api/v1/items_search_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">80.00 %</td>
-            <td class="cell--number">9</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">5</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">0.80</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.20</td>
             
           </tr>
         
@@ -165,7 +165,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.50</td>
+            <td class="cell--number">1.75</td>
             
           </tr>
         
@@ -380,12 +380,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#761315e473d7d04a76df69b3b908dc0b6df40035" class="src_link" title="spec/requests/api/v1/items_search_spec.rb">spec/requests/api/v1/items_search_spec.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">85.71 %</td>
-            <td class="cell--number">41</td>
-            <td class="cell--number">28</td>
-            <td class="cell--number">24</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">0.86</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">43</td>
+            <td class="cell--number">29</td>
+            <td class="cell--number">29</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -901,8 +901,8 @@
   <div class="header">
     <h3>app/controllers/api/v1/items_search_controller.rb</h3>
     <h4>
-      <span class="red">
-  80.0%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -912,8 +912,8 @@
 
     <div class="t-line-summary">
       <b>5</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -946,19 +946,30 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="3">
+            
             
 
             
 
-            <code class="ruby">    if Item.find_all_by_name(params[:name]) == nil || params[:name] == &quot;&quot;</code>
+            <code class="ruby">    # binding.pry</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="4">
+          <li class="covered" data-hits="2" data-linenumber="4">
+            <span class="hits">2</span>
             
+
+            
+
+            <code class="ruby">    if Item.find_all_by_name(params[:name]) == [] || params[:name] == &quot;&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
             
 
             
@@ -968,7 +979,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -979,7 +990,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="7">
             <span class="hits">1</span>
             
 
@@ -990,7 +1001,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -1001,7 +1012,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
@@ -1012,7 +1023,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -1627,8 +1638,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="5">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="4" data-linenumber="5">
+            <span class="hits">4</span>
             
 
             
@@ -6074,8 +6085,8 @@
   <div class="header">
     <h3>spec/requests/api/v1/items_search_spec.rb</h3>
     <h4>
-      <span class="yellow">
-  85.71%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -6084,9 +6095,9 @@
     
 
     <div class="t-line-summary">
-      <b>28</b> relevant lines.
-      <span class="green"><b>24</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <b>29</b> relevant lines.
+      <span class="green"><b>29</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -6444,7 +6455,7 @@
 
             
 
-            <code class="ruby">describe &#39;sad path&#39; do</code>
+            <code class="ruby">describe &quot;sad path&quot; do</code>
           </li>
         </div>
       
@@ -6455,13 +6466,13 @@
 
             
 
-            <code class="ruby">  xit &#39;returns and error if no match&#39; do</code>
+            <code class="ruby">  it &#39;returns and error if no match&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="34">
-            
+          <li class="covered" data-hits="1" data-linenumber="34">
+            <span class="hits">1</span>
             
 
             
@@ -6477,13 +6488,13 @@
 
             
 
-            <code class="ruby">    #still getting &quot;word&quot; as params instead of xf&quot;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="36">
-            
+          <li class="covered" data-hits="1" data-linenumber="36">
+            <span class="hits">1</span>
             
 
             
@@ -6504,8 +6515,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="38">
-            
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
             
 
             
@@ -6515,13 +6526,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="39">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    expect(parsed[:data]).to have_value(&quot;No item matches&quot;)</code>
+            
+
+            <code class="ruby">    error_msg = parsed[:data][:details]</code>
           </li>
         </div>
       
@@ -6532,12 +6543,34 @@
 
             
 
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(error_msg).to eq(&quot;No item matches this name&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="42">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
