@@ -20,6 +20,22 @@ RSpec.describe "Merchant Search" do
     expect(merchant[:id].to_i).to eq(@merchant.id)
     expect(merchant[:attributes][:name]).to eq(@merchant.name)
   end
+
+  it "can find all merchants by name fragment" do
+    #make sure this is the correct uri for this endpoint
+    get "/api/v1/merchants/find/all?name=ob"
+
+    expect(response).to be_successful
+
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    merchants = parsed[:data]
+
+    expect(merchants.count).to eq(2)
+    expect(merchants[0][:id].to_i).to eq(@merchant.id)
+    expect(merchants[0][:attributes][:name]).to eq(@merchant.name)
+    expect(merchants[1][:id].to_i).to eq(@merchant2.id)
+    expect(merchants[1][:attributes][:name]).to eq(@merchant2.name)
+  end
 end
 
 describe "sad path" do
