@@ -8,10 +8,10 @@ class Api::V1::MerchantsSearchController < ApplicationController
   end
 
   def find_all
-    if Merchant.find_all_by_name(params[:name]) == nil || params[:name] == ""
+    if Merchant.find_all_by_name(params[:name]) == [] || params[:name] == ""
       render json: { data: { details: "No merchant(s) match this name" }}, status: 404
     else
       render json: MerchantSerializer.new(Merchant.find_all_by_name(params[:name]))
-    end 
+    end
   end
 end

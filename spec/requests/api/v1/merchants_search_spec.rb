@@ -39,7 +39,7 @@ RSpec.describe "Merchant Search" do
 end
 
 describe "sad path" do
-  it 'returns an error message if no match' do
+  it 'returns an error message if no match for find' do
     merchant = Merchant.create!(name: "Bob Belcher")
     merchant2 = Merchant.create!(name: "Rob Berto")
     merchant3 = Merchant.create!(name: "John Smith")
@@ -54,5 +54,22 @@ describe "sad path" do
     error_msg = parsed[:data][:details]
 
     expect(error_msg).to eq("No merchant matches this name")
+  end
+
+  it 'returns an error message if no match for find all' do
+    merchant = Merchant.create!(name: "Bob Belcher")
+    merchant2 = Merchant.create!(name: "Rob Berto")
+    merchant3 = Merchant.create!(name: "John Smith")
+    item = merchant.items.create!(name: "sword", description: "pointy", unit_price: 32)
+    item2 = merchant.items.create!(name: "shield", description: "not pointy", unit_price: 30)
+
+    get "/api/v1/merchants/find/all?name=mary"
+
+    expect(response.status).to eq(404)
+
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    error_msg = parsed[:data][:details]
+
+    expect(error_msg).to eq("No merchant(s) match this name")
   end
 end
