@@ -29,13 +29,15 @@ RSpec.describe "Item Search" do
   end
 end
 
-describe 'sad path' do
-  xit 'returns and error if no match' do
+describe "sad path" do
+  it 'returns and error if no match' do
     get "/api/v1/items/find_all?name=xf"
-    #still getting "word" as params instead of xf"
+
     expect(response.status).to eq(404)
 
     parsed = JSON.parse(response.body, symbolize_names: true)
-    expect(parsed[:data]).to have_value("No item matches")
+    error_msg = parsed[:data][:details]
+    
+    expect(error_msg).to eq("No item matches this name")
   end
 end

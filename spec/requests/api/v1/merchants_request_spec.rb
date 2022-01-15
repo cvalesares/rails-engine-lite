@@ -46,3 +46,17 @@ RSpec.describe 'Merchants Request' do
     expect(items.first[:attributes][:merchant_id]).to eq(merchant.id)
   end
 end
+
+describe 'sad path' do
+  it 'returns an error if no item exists for a merchant' do
+    merchant = Merchant.create!(name: "Bob Belcher")
+
+    get "/api/v1/merchants/#{merchant.id}/items"
+    expect(response.status).to eq(404)
+
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    error_msg = parsed[:errors][:details]
+
+    expect(error_msg).to eq("No items available for this merchant")
+  end
+end
