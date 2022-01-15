@@ -7,3 +7,6 @@ class Api::V1::ItemsSearchController < ApplicationController
     end
   end
 end
+
+#for find single by name try -ln4.first
+#.limit(1) would work here if we needed it in an array
